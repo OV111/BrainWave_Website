@@ -11,11 +11,7 @@ const Hero = () => {
   return (
     <React.Fragment>
       <div className="relative overflow-hidden">
-        <img
-          src="../src/assets/hero/hero-background.jpg"
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover -z-1"
-        />
+        
         {/* Vertical line */}
 
         <div className="relative top-24 mx-auto text-center">
@@ -44,24 +40,28 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="relative h-full max-w-[27rem] top-60 mx-auto md:max-w-5xl xl:mb-10">
+        <div className="relative pb-160 top-70 md:max-w-5xl max-w-[27rem] mx-auto">
           <div className="relative z-1 p-0.5 rounded-2xl bg-gradient-to-r from-[#ca2200] via-[#2a00d2] to-[#ffffff]">
             <div className="relative bg-[#0E0C15] rounded-[1rem]">
               <div className="h-[1.2rem] bg-[#43435c] rounded-t-[0.9rem]" />
-              <div className="relative mx-auto rounded-1xl z-10 overflow-hidden ">
-              {/* Robot Image */}
+              <div className="h-[730px] w-full relative mx-auto rounded-xl overflow-hidden">
+                {/* Robot Image */}
                 <img
                   src="../src/assets/hero/robot.jpg"
-                  className="relative aspect-[33/40] w-full scale-1[1.7] translate-y-[8%] md:scale-[1] md:-translate-y-[10%] lg:-translate-y-[23%]"
+                  className="w-full h-full object-cover"
                   alt="robot pic"
                 />
-
-              {/* <div className="h-[2rem] bg-[#43435C] rounded-t-[0.9rem]" /> */}
               </div>
             </div>
           </div>
         </div>
 
+        
+        <img
+          src="../src/assets/hero/hero-background.jpg"
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover -z-1 "
+        />
       </div>
 
       <BottomLine />
