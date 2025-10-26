@@ -3,6 +3,7 @@ import Button from "../components/Button";
 import { BottomLine } from "../components/BottomLine";
 import { BackgroundCircles } from "../components/BackgroundCircles";
 import { ScrollParallax } from "react-just-parallax";
+import PlusSvg from "../components/PlusSvg.jsx";
 import Generating from "../components/Generating";
 import Notification from "../components/Notification.jsx";
 import Rings from "../components/Rings";
@@ -10,9 +11,16 @@ import Rings from "../components/Rings";
 const Hero = () => {
   return (
     <React.Fragment>
-      <div className="relative overflow-hidden">
-        
+      <div className="relative overflow-hidden ">
+        <img
+          src="../src/assets/hero/hero-background.jpg"
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover -z-1 "
+        />
         {/* Vertical line */}
+        <div className="hidden absolute top-[5.5px] left-10 right-10 h-[0.2px] bg-[#252134] pointer-events-none xl:block"></div>
+        <PlusSvg className="hidden absolute  right-10 z-2 pointer-events-none xl:block" />
+        <PlusSvg className="hidden absolute  left-10 z-2 pointer-events-none xl:block" />
 
         <div className="relative top-24 mx-auto text-center">
           <h1 className="font-semibold tracking-normal text-[#FFFFFF] mx-auto text-7xl w-230 max-w-[230]">
@@ -40,7 +48,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="relative pb-160 top-70 md:max-w-5xl max-w-[27rem] mx-auto">
+        <div className="relative pb-146 top-70 md:max-w-5xl max-w-[27rem] mx-auto">
           <div className="relative z-1 p-0.5 rounded-2xl bg-gradient-to-r from-[#ca2200] via-[#2a00d2] to-[#ffffff]">
             <div className="relative bg-[#0E0C15] rounded-[1rem]">
               <div className="h-[1.2rem] bg-[#43435c] rounded-t-[0.9rem]" />
@@ -55,13 +63,6 @@ const Hero = () => {
             </div>
           </div>
         </div>
-
-        
-        <img
-          src="../src/assets/hero/hero-background.jpg"
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover -z-1 "
-        />
       </div>
 
       <BottomLine />
