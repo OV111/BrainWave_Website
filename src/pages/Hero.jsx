@@ -8,19 +8,23 @@ import Generating from "../components/Generating";
 import Notification from "../components/Notification.jsx";
 import Rings from "../components/Rings";
 
+import { companys } from "../constants/data.js";
+
 const Hero = () => {
   return (
     <React.Fragment>
-      <div className="relative overflow-hidden ">
+      <div className="relative  overflow-hidden ">
         <img
           src="../src/assets/hero/hero-background.jpg"
           alt=""
           className="absolute inset-0 w-full h-full object-cover -z-1 "
         />
-        {/* Vertical line */}
-        <div className="hidden absolute top-[5.5px] left-10 right-10 h-[0.2px] bg-[#252134] pointer-events-none xl:block"></div>
-        <PlusSvg className="hidden absolute  right-10 z-2 pointer-events-none xl:block" />
-        <PlusSvg className="hidden absolute  left-10 z-2 pointer-events-none xl:block" />
+        {/* Vertical & horizontal Lines */}
+        <div className="hidden absolute left-0 right-0 h-[0.2px] bg-[#252134] pointer-events-none xl:block"></div>
+        <div className="hidden absolute right-10 top-0 bottom-0 w-[0.2px] bg-[#252134] xl:block"></div>
+        <div className="hidden absolute left-10 top-0 bottom-0 w-[0.2px] bg-[#252134] xl:block"></div>
+        <PlusSvg className="hidden absolute right-[34.5px] z-2 pointer-events-none xl:block" />
+        <PlusSvg className="hidden absolute left-[34.5px] z-2 pointer-events-none xl:block" />
 
         <div className="relative top-24 mx-auto text-center">
           <h1 className="font-semibold tracking-normal text-[#FFFFFF] mx-auto text-7xl w-230 max-w-[230]">
@@ -41,27 +45,45 @@ const Hero = () => {
               productivity with BrainWave, the open AI chat app.
             </p>
 
-            <Button href={"#/pricing"} className="mx-auto relative top-10">
+            <Button
+              href={"#/pricing"}
+              className="mx-auto relative top-10"
+            >
               Get Started
             </Button>
             <BackgroundCircles />
           </div>
         </div>
-
-        <div className="relative pb-146 top-70 md:max-w-5xl max-w-[27rem] mx-auto">
+        {/* pb-146 */}
+        <div className="relative mb-106 top-60 md:max-w-5xl max-w-[27rem] mx-auto">
           <div className="relative z-1 p-0.5 rounded-2xl bg-gradient-to-r from-[#ca2200] via-[#2a00d2] to-[#ffffff]">
             <div className="relative bg-[#0E0C15] rounded-[1rem]">
-              <div className="h-[1.2rem] bg-[#43435c] rounded-t-[0.9rem]" />
-              <div className="h-[730px] w-full relative mx-auto rounded-xl overflow-hidden">
+              <div className="h-[1rem] bg-[#43435c] rounded-t-[0.9rem]" />
+              <div className="h-[450px] w-full relative mx-auto rounded-xl overflow-hidden">
                 {/* Robot Image */}
                 <img
-                  src="../src/assets/hero/robot.jpg"
-                  className="w-full h-full object-cover"
+                  src="../src/assets/hero/robot2.jpg"
+                  className="w-full h-full  object-cover"
                   alt="robot pic"
                 />
               </div>
             </div>
           </div>
+        </div>
+
+        <h3 className="text-center text-xl font-mono  text-[#ADA8C3]">
+          Helping People Create Beautiful Content At
+        </h3>
+        <div className="flex justify-between items-center gap-10">
+          {companys.map((company) => (
+            <li key={company.id}>
+              <img
+                src={company.img}
+                alt="company's"
+                className="h-15 w-70 max-w-70"
+              />
+            </li>
+          ))}
         </div>
       </div>
 
