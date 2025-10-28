@@ -13,20 +13,20 @@ import { companys } from "../constants/data.js";
 const Hero = () => {
   return (
     <React.Fragment>
-      <div className="relative  overflow-hidden ">
+      <div className="relative overflow-hidden pb-10">
         <img
           src="../src/assets/hero/hero-background.jpg"
           alt=""
-          className="absolute inset-0 w-full h-full object-cover -z-1 "
+          className="absolute inset-0 w-full h-full object-cover -z-10 "
         />
         {/* Vertical & horizontal Lines */}
-        <div className="hidden absolute left-0 right-0 h-[0.2px] bg-[#252134] pointer-events-none xl:block"></div>
+        <div className="hidden absolute top-23 left-0 right-0 h-[0.2px] bg-[#252134] pointer-events-none xl:block"></div>
         <div className="hidden absolute right-10 top-0 bottom-0 w-[0.2px] bg-[#252134] xl:block"></div>
         <div className="hidden absolute left-10 top-0 bottom-0 w-[0.2px] bg-[#252134] xl:block"></div>
         <PlusSvg className="hidden absolute right-[34.5px] z-2 pointer-events-none xl:block" />
         <PlusSvg className="hidden absolute left-[34.5px] z-2 pointer-events-none xl:block" />
 
-        <div className="relative top-24 mx-auto text-center">
+        <div className="relative top-45 mx-auto text-center">
           <h1 className="font-semibold tracking-normal text-[#FFFFFF] mx-auto text-7xl w-230 max-w-[230]">
             Explore the Possibilities of AI Chatting with{" "}
             <span className="inline-block relative">
@@ -55,8 +55,8 @@ const Hero = () => {
           </div>
         </div>
         {/* pb-146 */}
-        <div className="relative mb-106 top-60 md:max-w-5xl max-w-[27rem] mx-auto">
-          <div className="relative z-1 p-0.5 rounded-2xl bg-gradient-to-r from-[#ca2200] via-[#2a00d2] to-[#ffffff]">
+        <div className="relative mb-106 top-85 md:max-w-5xl max-w-[27rem] mx-auto">
+          <div className="relative z-1 p-0.5 rounded-2xl bg-gradient-to-r from-[#6333a8] via-[#cdc0ff] to-[#242e93]">
             <div className="relative bg-[#0E0C15] rounded-[1rem]">
               <div className="h-[1rem] bg-[#43435c] rounded-t-[0.9rem]" />
               <div className="h-[450px] w-full relative mx-auto rounded-xl overflow-hidden">
