@@ -1,28 +1,79 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Button from "./Button";
-import "../index.css"
+import "../index.css";
+import { BottomLine } from "./BottomLine";
+
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
 const Navbar = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    console.log(location.pathname);
+    if (location.pathname === "/features") {
+      scrolling("features");
+    } else if (location.pathname === "/pricing") {
+      scrolling("pricing");
+    } else if (location.pathname === "/how-to-use") {
+      scrolling("how-to-use");
+    } else if (location.pathname === "/roadmap") {
+      scrolling("roadmap");
+    }
+  });
+
+  const scrolling = (path) => {
+    document.getElementById(path).scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <div className="flex w-full z-50 justify-between items-center bg-[#0E0C15] text-2xl backdrop-blur-sm p-6">
-      <div className="">
-        <Link to="/brainwave">
-          <img src="src/assets/brainwave.svg" alt="" className="" />
-        </Link>
+    <React.Fragment>
+      <div className="flex justify-between items-center fixed z-50 w-full pl-10 bg-[#0E0C15]/50 backdrop-blur-lg text-2xl p-6">
+        <div className="">
+          <Link to="">
+            <img src="src/assets/brainwave.svg" alt="" className="" />
+          </Link>
+        </div>
+        <div className="flex justify-between items-center text-[#CAC6DD] text-lg gap-20 font-mono transition-colors duration-500">
+          <Link
+            to="features"
+            onClick={() => {
+              scrolling();
+            }}
+            className=" hover:text-white"
+          >
+            FEATURES
+          </Link>
+          <Link to="pricing"  onClick={() => {
+              scrolling();
+            }}className=" hover:text-white">
+            PRICING
+          </Link>
+          <Link to="how-to-use"onClick={() => {
+              scrolling();
+            }} className="hover:text-white">
+            HOW TO USE
+          </Link>
+          <Link to="roadmap" onClick={() => {
+              scrolling();
+            }}className=" hover:text-white">
+            ROADMAP
+          </Link>
+        </div>
+        <div className="flex justify-between items-center pr-5 gap-10 text-lg font-mono text-[#CAC6DD]">
+          <Link to="signup" className="hover:text-white">
+            NEW ACCOUNT
+          </Link>
+          <Link to="login">
+            <Button className="cursor-pointer hover:text-white lg:flex">
+              SIGN IN
+            </Button>
+          </Link>
+        </div>
       </div>
-      <div className="flex justify-between items-center text-[#FFFFFF] text-lg gap-20 font-mono" >
-        <Link to="/brainwave#features">FEATURES</Link>
-        <Link to="/brainwave#pricing">PRICING</Link>
-        <Link to="/brainwave#how-to-use">HOW TO USE</Link>
-        <Link to="/brainwave#roadmap">ROADMAP</Link>
-      </div>
-      <div className="flex justify-between items-center pr-0 gap-10 text-lg font-mono text-[#FFFFFF]">
-        <Link to="/brainwave#signup">NEW ACCOUNT</Link>
-        <Button className="hidden lg:flex" href="/brainwave#login">
-          SIGN IN
-        </Button>
-      </div>
-    </div>
+      {/* <BottomLine/> */}
+    </React.Fragment>
   );
 };
 
