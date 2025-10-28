@@ -11,7 +11,7 @@ const Navbar = () => {
   const location = useLocation();
 
   useEffect(() => {
-    console.log(location.pathname);
+    // console.log(location.pathname);
     if (location.pathname === "/features") {
       scrolling("features");
     } else if (location.pathname === "/pricing") {
@@ -22,6 +22,10 @@ const Navbar = () => {
       scrolling("roadmap");
     }
   });
+
+  // Trigger when the path changes
+  // Get the current section ID from the map
+  // Call scrollIntoView()
 
   const scrolling = (path) => {
     document.getElementById(path).scrollIntoView({ behavior: "smooth" });
