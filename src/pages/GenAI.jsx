@@ -1,5 +1,7 @@
 import React from "react";
 import Generating from "../components/Generating";
+import { VideoBar, VideoChatMessage } from "../components/VideoStyle";
+// import disc02 from "../constants/data.js"
 const GenAI = () => {
   return (
     <div className="relative pt-30">
@@ -55,9 +57,11 @@ const GenAI = () => {
               className="rounded-2xl"
             />
           </div>
-          <div>
-            <h1 className="absolute">Photo editing</h1>
-            <p className="absolute">
+          <div className="absolute bottom-40 ml-12">
+            <h1 className="absolute text-white text-4xl font-semibold w-100">
+              Photo editing
+            </h1>
+            <p className="absolute w-120 top-12 text-lg text-[#ADA8C3]">
               {" "}
               Automatically enhance your photos using our AI app's photo editing
               feature. Try it now!
@@ -68,27 +72,68 @@ const GenAI = () => {
         {/* Right Content */}
 
         <div className="rounded-2xl w-200 max-w-200 ml-5 mr-15 border-[0.2px] bg-[#191626]">
-          <div className="m-10">
-            <h1 className="text-4xl pb-4 font-semibold text-white">
+          <div className="m-10 ml-12">
+            <h1 className="text-4xl pb-4  font-semibold text-white">
               Video generation
             </h1>
-            <p className="text-lg text-[#ADA8C3] w-130 ">
+            <p className="text-lg text-[#ADA8C3] w-130">
               The world’s most powerful AI photo and video art generation
               engine. What will you create?
             </p>
-            <ul>
-              <li></li>
+            <ul className="flex mt-10 pb-1 justify-between items-center mx-auto max-w-140 ">
+              <li className="p-3 bg-[#474060] rounded-2xl">
+                <img
+                  src="src/assets/genAiIcons/chrome-cast.svg"
+                  alt=""
+                  width={35}
+                  height={35}
+                />
+              </li>
+              <li className="p-3 bg-[#474060] rounded-2xl">
+                <img
+                  src="src/assets/genAiIcons/recording-03.svg"
+                  alt=""
+                  width={35}
+                  height={35}
+                />
+              </li>
+              <li className="p-3 bg-[#474060] rounded-2xl">
+                <img
+                  src="src/assets/genAiIcons/disc02.svg"
+                  alt=""
+                  width={35}
+                  height={35}
+                />
+              </li>
+              <li className="p-3 bg-[#474060] rounded-2xl">
+                <img
+                  src="src/assets/genAiIcons/recording-01.svg"
+                  alt=""
+                  width={35}
+                  height={35}
+                />
+              </li>
+              <li className="p-3 bg-[#474060] rounded-2xl">
+                <img
+                  src="src/assets/genAiIcons/sliders-04.svg"
+                  alt=""
+                  width={35}
+                  height={35}
+                />
+              </li>
             </ul>
           </div>
 
-          <div className="rounded-2xl m-4 bg-amber-600">
+          <div className="relative rounded-2xl mx-4 border-none h-100 bg-[#3F3A52]">
             <img
               src="src/assets/services/service-3.png"
-              className="w-full h-full object-cover"
-              width={520}
-              height={400}
+              className="w-full h-full object-cover ml-4"
+              // width={520}
+              // height={200}
               alt="robot-3"
             />
+            <VideoChatMessage />
+            <VideoBar cl/>
           </div>
         </div>
       </div>
