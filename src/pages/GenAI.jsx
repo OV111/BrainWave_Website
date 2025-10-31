@@ -69,7 +69,9 @@ const GenAI = () => {
 
         <div className="rounded-2xl w-200 max-w-200 ml-5 mr-15 border-[0.2px] bg-[#191626]">
           <div className="m-10">
-            <h1 className="text-4xl pb-4 font-semibold text-white">Video generation</h1>
+            <h1 className="text-4xl pb-4 font-semibold text-white">
+              Video generation
+            </h1>
             <p className="text-lg text-[#ADA8C3] w-130 ">
               The world’s most powerful AI photo and video art generation
               engine. What will you create?
