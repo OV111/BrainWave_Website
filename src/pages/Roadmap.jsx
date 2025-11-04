@@ -1,6 +1,9 @@
 import PlusSvg from "../components/PlusSvg";
 import { RoadmapGradient } from "../components/RoadmapGradient";
 import { RoadmapGradient2 } from "../components/RoadmapGradient";
+import Button from "../components/Button";
+import { Link } from "react-router-dom";
+// import { BottomLine } from "../components/BottomLine";
 const Roadmap = () => {
   return (
     <section id="roadmap" className="relative">
@@ -140,10 +143,56 @@ const Roadmap = () => {
             </div>
             <RoadmapGradient2 />
           </div>
+          {/* <BottomLine/> */}
         </div>
 
-        <div>
-          <h1>vhe</h1>
+        <div className="text-center pt-15 pb-15 font-mono">
+          <Button>
+            <h1>Our Roadmap</h1>
+          </Button>
+        </div>
+      </div>
+      {/* Footer */}
+      <div className="relative">
+        <div className="hidden absolute h-[0.2px] bottom-0 left-[40px] right-[40px] top-[5px] bg-[#252134] lg:block"></div>
+        <PlusSvg className="absolute bottom-0 top-0 left-[35px] z-1"></PlusSvg>
+        <PlusSvg className="absolute bottom-0 top-0 right-[35px] z-1"></PlusSvg>
+        <div className="absolute w-[0.2px] bottom-0 top-0 left-[40px] bg-[#252134]"></div>
+        <div className="absolute w-[0.2px] bottom-0 top-0 right-[40px] bg-[#252134]"></div>
+        <div className="flex justify-between mx-20 py-10">
+          <div>
+            <h1 className="text-[#ADA8C3] text-lg">
+              © {new Date().getFullYear()} All Rights Reserved.
+            </h1>
+          </div>
+
+            <ul className="flex justify-between items-center gap-5">
+              <li>
+                <Link to="/">
+                  <img src="src/assets/socials/discord.svg" alt="" className="w-8 h-8" />
+                </Link>
+              </li>
+              <li>
+                <Link to="/">
+                  <img src="src/assets/socials/facebook.svg" alt=""  className="w-8 h-8"/>
+                </Link>
+              </li>
+              <li>
+                <Link to="/">
+                  <img src="src/assets/socials/instagram.svg" alt=""  className="w-8 h-8"/>
+                </Link>
+              </li>
+              <li>
+                <Link to="/">
+                  <img src="src/assets/socials/telegram.svg" alt=""  className="w-8 h-8"/>
+                </Link>
+              </li>
+              <li>
+                <Link to="/">
+                  <img src="src/assets/socials/twitter.svg" alt=""  className="w-8 h-8"/>
+                </Link>
+              </li>
+            </ul>
         </div>
       </div>
     </section>
