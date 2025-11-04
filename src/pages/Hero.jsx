@@ -10,6 +10,8 @@ import Rings from "../components/Rings";
 
 import { companys } from "../constants/data.js";
 
+import { Gradient } from "../components/Gradient.jsx";
+
 const Hero = () => {
   return (
     <React.Fragment>
@@ -69,6 +71,7 @@ const Hero = () => {
                   />
                   <Generating className="absolute flex justify-center top-95 left-70 w-120 bg-[#25213480] border-[0.2px] border-[#413f48] backdrop-blur-xl opacity-90 xl:flex" />
                 </div>
+                  <Gradient/>
               </div>
             </div>
           </div>
