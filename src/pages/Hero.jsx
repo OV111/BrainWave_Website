@@ -1,16 +1,11 @@
 import React from "react";
 import Button from "../components/Button";
-import { BottomLine } from "../components/BottomLine";
+import BottomLine from "../styleComponents/BottomLine.jsx"
 import { BackgroundCircles } from "../components/BackgroundCircles";
-import { ScrollParallax } from "react-just-parallax";
-import PlusSvg from "../components/PlusSvg.jsx";
+import PlusSvg from "../styleComponents/PlusSvg.jsx";
 import Generating from "../components/Generating";
-import Notification from "../components/Notification.jsx";
-import Rings from "../components/Rings";
-
-import { companys } from "../constants/data.js";
-
-import { Gradient } from "../components/Gradient.jsx";
+import { companys, icons } from "../constants/data.js";
+import { Gradient } from "../styleComponents/Gradient.jsx";
 
 const Hero = () => {
   return (
@@ -29,57 +24,103 @@ const Hero = () => {
           <PlusSvg className="hidden absolute right-[34.5px] z-2 pointer-events-none xl:block" />
           <PlusSvg className="hidden absolute left-[34.5px] z-2 pointer-events-none xl:block" />
 
-          <div className="relative top-45 mx-auto text-center">
-            <h1 className="font-semibold tracking-normal text-[#FFFFFF] mx-auto text-7xl w-230 max-w-[230]">
-              Explore the Possibilities of AI Chatting with{" "}
-              <span className="inline-block relative">
-                BrainWave
-                <img
-                  src="../src/assets/hero/curve.png"
-                  alt="curve of brainwave"
-                  className="absolute top-full w-full xl:-mt-2"
-                />
-              </span>
-            </h1>
+          <div className="relative top-50 mx-auto text-center">
+            <div className="flex">
+              <h1 className="font-semibold text-[#FFFFFF] text-center mx-auto text-6xl w-220 max-w-[260]">
+                Explore the Possibilities of AI Chatting with{" "}
+                <span className="inline-block relative">
+                  BrainWave
+                  <img
+                    src="../src/assets/hero/curve.png"
+                    alt="curve of brainwave"
+                    className="absolute top-full w-full xl:-mt-2"
+                  />
+                </span>
+              </h1>
+            </div>
 
-            <div className="relative top-10">
-              <p className="font-normal mx-auto relative text-2xl w-190 max-w-360 text-[#CAC6DD]">
+            <div className="relative top-8">
+              <p className="font-normal mx-auto relative text-[1.25rem] w-190 max-w-360 text-[#CAC6DD]">
                 Unleash the power of AI within BrainWave. Upgrade your
                 productivity with BrainWave, the open AI chat app.
               </p>
 
               <Button
                 href={"#/pricing"}
-                className="mx-auto font-mono relative top-10"
+                className="mx-auto font-mono relative top-10 text-[#CAC6DD]"
               >
                 Get Started
               </Button>
               <BackgroundCircles />
             </div>
           </div>
-          {/* pb-146 */}
           <div className="relative mb-106 top-85 md:max-w-5xl max-w-[27rem] mx-auto">
             <div className="relative z-1 p-0.5 rounded-2xl bg-gradient-to-r from-[#6333a8] via-[#cdc0ff] to-[#242e93]">
               <div className="relative bg-[#0E0C15] rounded-[1rem]">
                 <div className="h-[1rem] bg-[#43435c] rounded-t-[0.9rem]" />
-                <div className="h-[450px] w-full relative mx-auto rounded-xl overflow-hidden ">
+                <div className="h-[470px] w-full relative mx-auto rounded-xl rounded-tr-none rounded-tl-none overflow-hidden ">
                   {/* Robot Image */}
                   <img
                     src="../src/assets/hero/robot2.jpg"
                     className="w-full h-full object-cover"
                     alt="robot pic"
                   />
-                  <Generating className="absolute flex justify-center top-95 left-70 w-120 bg-[#25213480] border-[0.2px] border-[#413f48] backdrop-blur-xl opacity-90 xl:flex" />
+                  <Generating className="absolute flex justify-center top-100 left-70 w-120 bg-[#25213480] border-[0.2px] border-[#413f48] backdrop-blur-lg opacity-100 xl:flex" />
                 </div>
-                  <Gradient/>
+
+                <Gradient />
               </div>
             </div>
           </div>
+          <div className="absolute left-25 bottom-95 flex justify-between items-center gap-8 border-[0.2px] border-[#413f48] p-5 bg-[#25213480] backdrop-blur-sm rounded-2xl z-1">
+            {icons.map((obj) => (
+              <div>
+                <img src={obj.icon} alt="" />
+              </div>
+            ))}
+          </div>
 
-          <h3 className="text-center text-xl font-mono  text-[#ADA8C3]">
+          <div className="absolute right-22 bottom-140 z-1 p-2 flex border-[0.2px] border-[#413f48] rounded-2xl backdrop-blur-sm bg-[#25213480]">
+            <img
+              src="src/assets/notification/image-1.png"
+              alt=""
+              className="rounded-xl"
+              width={60}
+              height={60}
+            />
+            <div className="grid ml-4">
+              <h1 className="text-lg text-white font-semibold pr-2">
+                Code generation
+              </h1>
+              <div className="flex items-center gap-2">
+                <img
+                  src="src/assets/notification/image-4.png"
+                  alt=""
+                  width={20}
+                  height={20}
+                  className="rounded-full"
+                />
+                <img
+                  src="src/assets/notification/image-2.png"
+                  alt=""
+                  width={20}
+                  height={20}
+                  className="rounded-full"
+                />
+                <img
+                  src="src/assets/notification/image-3.png"
+                  alt=""
+                  width={20}
+                  height={20}
+                  className="rounded-full"
+                />
+              </div>
+            </div>
+          </div>
+          <h3 className="text-center text-xl font-mono pb-2 text-[#ADA8C3]">
             Helping People Create Beautiful Content At
           </h3>
-          <div className="flex justify-center pt-15 items-center gap-40 ">
+          <div className="flex justify-center pt-8 items-center gap-40 ">
             {companys.map((company) => (
               <img
                 src={company.img}

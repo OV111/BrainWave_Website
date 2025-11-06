@@ -1,24 +1,24 @@
-import PlusSvg from "../components/PlusSvg";
-import { RoadmapGradient } from "../components/RoadmapGradient";
-import { RoadmapGradient2 } from "../components/RoadmapGradient";
+import PlusSvg from "../styleComponents/PlusSvg";
+import { RoadmapGradient } from "../styleComponents/RoadmapGradient";
+import { RoadmapGradient2 } from "../styleComponents/RoadmapGradient";
 import Button from "../components/Button";
 import { Link } from "react-router-dom";
 // import { BottomLine } from "../components/BottomLine";
 const Roadmap = () => {
   return (
     <section id="roadmap" className="relative">
-      <div className="relative pt-6">
+      <div className="relative pt-2">
         <div className="hidden absolute mt-0 top-[5px] bottom-0 left-0 right-0 h-[0.2px] bg-[#252134] pointer-events-none xl:block"></div>
         <div className="hidden absolute w-[0.2px] left-10 bottom-0 top-0 bg-[#252134] xl:block"></div>
         <div className="hidden absolute w-[0.2px] right-10 bottom-0 top-0 bg-[#252134] xl:block"></div>
         <PlusSvg className="absolute bottom-0 top-0 left-[35px] z-1"></PlusSvg>
         <PlusSvg className="absolute bottom-0 top-0 right-[34.5px] z-1"></PlusSvg>
 
-        <div className="relative text-center ">
-          <p className="text-[#ADA8C3] font-mono text-lg mt-20 mb-2">
+        <div className="relative text-center">
+          <h6 className="text-[#ADA8C3] font-mono text-lg mt-20 mb-2">
             [ Ready To Get Started ]
-          </p>
-          <h1 className="text-6xl text-white font-semibold">
+          </h6>
+          <h1 className="text-6xl text-white font-semibold pt-2">
             What we’re working on
           </h1>
         </div>
@@ -26,16 +26,16 @@ const Roadmap = () => {
         <div className="flex ml-20 ">
           {/* Left Side */}
           <div className="grid">
-            <div className="relative w-155 h-180 border-[#252134] border-[0.2px] rounded-2xl mt-20 mb-0 z-1">
+            <div className="relative w-155 h-180 border-[#252134] border-[0.2px] rounded-2xl mt-20 mb-0 opacity-100 z-1">
               <img
                 src="src/assets/grid.png"
                 alt="bg-grid"
                 className="absolute w-full h-full "
               />
               <div className="flex justify-between mx-10 pt-10 items-center relative ">
-                <p className="text-lg text-white font-mono">
-                  [May {new Date().getFullYear()}]
-                </p>
+                <h6 className="text-lg text-white font-mono">
+                  [ May {new Date().getFullYear()} ]
+                </h6>
                 <p className="text-xl text-white font-mono">Done</p>
               </div>
               <img
@@ -58,12 +58,12 @@ const Roadmap = () => {
               <img
                 src="src/assets/grid.png"
                 alt="bg-grid"
-                className="absolute w-full h-full"
+                className="absolute w-full h-full opacity-80"
               />
               <div className="flex justify-between mx-10 pt-10 items-center relative ">
-                <p className="text-lg text-white font-mono">
-                  [May {new Date().getFullYear()}]
-                </p>
+                <h6 className="text-lg text-white font-mono">
+                  [ May {new Date().getFullYear()} ]
+                </h6>
                 <p className="text-xl text-white font-mono">Done</p>
               </div>
               <img
@@ -85,16 +85,16 @@ const Roadmap = () => {
           </div>
           {/* Right Side */}
           <div className="grid ">
-            <div className="relative w-155 h-180 border-[#252134] border-[0.2px] rounded-2xl ml-5 mt-40 pt-0 z-1">
+            <div className="relative w-155 h-180 border-[#252134] border-[0.2px] rounded-2xl ml-5 mt-40 pt-0 z-1 opacity-100">
               <img
                 src="src/assets/grid.png"
                 alt="bg-grid"
                 className="absolute w-full h-full"
               />
               <div className="relative flex justify-between mx-10 mt-10 items-center">
-                <p className="text-white text-lg font-mono">
-                  [July {new Date().getFullYear()}]
-                </p>
+                <h6 className="text-white text-lg font-mono">
+                  [ July {new Date().getFullYear()} ]
+                </h6>
                 <p className="text-white text-lg font-mono">In Progress</p>
               </div>
               <img
@@ -120,9 +120,9 @@ const Roadmap = () => {
                 className="absolute w-full h-full"
               />
               <div className="relative flex justify-between mx-10 mt-10">
-                <p className="text-white text-lg font-mono">
-                  [June {new Date().getFullYear()}]
-                </p>
+                <h6 className="text-white text-lg font-mono">
+                  [ June {new Date().getFullYear()} ]
+                </h6>
                 <p className="text-white text-lg font-mono">In Progress</p>
               </div>
               <img
@@ -147,52 +147,72 @@ const Roadmap = () => {
         </div>
 
         <div className="text-center pt-15 pb-15 font-mono">
-          <Button>
-            <h1>Our Roadmap</h1>
+          <Button >
+            <h5 className="cursor-pointer text-[#CAC6DD] hover:text-white">Our Roadmap</h5>
           </Button>
         </div>
       </div>
       {/* Footer */}
       <div className="relative">
-        <div className="hidden absolute h-[0.2px] bottom-0 left-[40px] right-[40px] top-[5px] bg-[#252134] lg:block"></div>
+        <div className="hidden absolute h-[0.2px] bottom-0 left-0 right-0 top-[5px] bg-[#252134] lg:block"></div>
         <PlusSvg className="absolute bottom-0 top-0 left-[35px] z-1"></PlusSvg>
         <PlusSvg className="absolute bottom-0 top-0 right-[35px] z-1"></PlusSvg>
-        <div className="absolute w-[0.2px] bottom-0 top-0 left-[40px] bg-[#252134]"></div>
-        <div className="absolute w-[0.2px] bottom-0 top-0 right-[40px] bg-[#252134]"></div>
-        <div className="flex justify-between mx-20 py-10">
-          <div>
-            <h1 className="text-[#ADA8C3] text-lg">
+        <div className="absolute w-[0.2px] bottom-0 top-0 left-10 bg-[#252134]"></div>
+        <div className="absolute w-[0.2px] bottom-0 top-0 right-10 bg-[#252134]"></div>
+        <div className="flex justify-between mx-20 pt-8 pb-5">
+          <div className="">
+            <h6 className="text-[#ADA8C3] font-mono text-lg">
               © {new Date().getFullYear()} All Rights Reserved.
-            </h1>
+            </h6>
           </div>
 
-            <ul className="flex justify-between items-center gap-5">
-              <li>
-                <Link to="/">
-                  <img src="src/assets/socials/discord.svg" alt="" className="w-8 h-8" />
-                </Link>
-              </li>
-              <li>
-                <Link to="/">
-                  <img src="src/assets/socials/facebook.svg" alt=""  className="w-8 h-8"/>
-                </Link>
-              </li>
-              <li>
-                <Link to="/">
-                  <img src="src/assets/socials/instagram.svg" alt=""  className="w-8 h-8"/>
-                </Link>
-              </li>
-              <li>
-                <Link to="/">
-                  <img src="src/assets/socials/telegram.svg" alt=""  className="w-8 h-8"/>
-                </Link>
-              </li>
-              <li>
-                <Link to="/">
-                  <img src="src/assets/socials/twitter.svg" alt=""  className="w-8 h-8"/>
-                </Link>
-              </li>
-            </ul>
+          <ul className="flex justify-between items-center gap-5">
+            <li>
+              <Link to="/">
+                <img
+                  src="src/assets/socials/discord.svg"
+                  alt=""
+                  className="w-8 h-8"
+                />
+              </Link>
+            </li>
+            <li>
+              <Link to="/">
+                <img
+                  src="src/assets/socials/facebook.svg"
+                  alt=""
+                  className="w-8 h-8"
+                />
+              </Link>
+            </li>
+            <li>
+              <Link to="/">
+                <img
+                  src="src/assets/socials/instagram.svg"
+                  alt=""
+                  className="w-8 h-8"
+                />
+              </Link>
+            </li>
+            <li>
+              <Link to="/">
+                <img
+                  src="src/assets/socials/telegram.svg"
+                  alt=""
+                  className="w-8 h-8"
+                />
+              </Link>
+            </li>
+            <li>
+              <Link to="/">
+                <img
+                  src="src/assets/socials/twitter.svg"
+                  alt=""
+                  className="w-8 h-8"
+                />
+              </Link>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
