@@ -1,25 +1,27 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
-import Hero from "./pages/Hero";
-import Features from "./pages/Features";
-import Collabs from "./pages/Collabs";
-import GenAI from "./pages/GenAI";
-import Pricing from "./pages/Pricing";
-import HowToUse from "./pages/HowToUse";
-import Roadmap from "./pages/Roadmap";
+import { lazy,Suspense } from "react";
+import LoadingSuspense from "./components/LoadingSuspense";
+
+const Hero = lazy(() => import("./pages/Hero"));
+const Features = lazy(() => import("./pages/Features"));
+const Collabs = lazy(() => import("./pages/Collabs"));
+const GenAI = lazy(() => import("./pages/GenAI"));
+const Pricing = lazy(() => import("./pages/Pricing"));
+const Roadmap = lazy(() => import("./pages/Roadmap"));
 
 const HomePage = () => {
   return (
     <React.Fragment>
-      <Hero />
-      <div className="bg-[#0E0C15]">
-        <Features />
-        <Collabs />
-        <GenAI/>
-        {/* <Pricing />  */}
-        <HowToUse />
-        <Roadmap />
-      </div>
+      <Suspense fallback={<LoadingSuspense/>}>
+        <Hero />
+        <div className="bg-[#0E0C15]">
+          <Features />
+          <Collabs />
+          <GenAI />
+          <Pricing />
+          <Roadmap />
+        </div>
+      </Suspense>
     </React.Fragment>
   );
 };
