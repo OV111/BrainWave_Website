@@ -46,8 +46,8 @@ const Navbar = () => {
           <Link to="signup" className="hover:text-white">
             NEW ACCOUNT
           </Link>
-          <Link to="login">
-            <Button className="cursor-pointer hover:text-white lg:flex">
+          <Link to="login" >
+            <Button className="cursor-pointer  lg:flex">
               SIGN IN
             </Button>
           </Link>
