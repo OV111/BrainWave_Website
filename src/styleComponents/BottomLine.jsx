@@ -1,5 +1,5 @@
 import PlusSvg from "./PlusSvg";
-export const BottomLine = () => {
+const BottomLine = () => {
   return (
     <>
       <div className="hidden absolute top-[55.25rem] left-10 right-10 h-0.25 bg-[#252134] pointer-events-none xl:block" />
@@ -8,3 +8,4 @@ export const BottomLine = () => {
     </>
   );
 };
+export default BottomLine
