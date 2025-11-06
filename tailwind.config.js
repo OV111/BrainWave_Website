@@ -19,7 +19,7 @@ export default {
           1: "#26242C",
         },
         n: {
-            1: "#FFFFFF",
+          1: "#FFFFFF",
           2: "#CAC6DD",
           3: "#ADA8C3",
           4: "#757185",
@@ -35,6 +35,7 @@ export default {
         },
       },
       fontFamily: {
+        elms: ['"Elms Sans"', "sans-serif"],
         sans: ["var(--font-sora)", ...fontFamily.sans],
         code: "var(--font-code)",
         grotesk: "var(--font-grotesk)",
