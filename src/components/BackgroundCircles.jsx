@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import Rings from "../components/Rings";
+import Rings from "../styleComponents/Rings";
 import { MouseParallax } from "react-just-parallax";
 export const BackgroundCircles = ({ parallaxRef }) => {
   const [mounted, setMounted] = useState(false);
