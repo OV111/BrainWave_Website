@@ -6,15 +6,15 @@ const companys = [
   },
   {
     id: 2,
-    name: "Spotify",
-    img: "../src/assets/companys/icons8-spotify-96.png",
+    name: "Sitecore",
+    img: "../src/assets/companys/icons8-sitecore-96.png",
   },
   {
     id: 3,
     name: "Firebase",
     img: "../src/assets/companys/icons8-firebase-96.png",
   },
-  { id: 4, name: "Notion", img: "../src/assets/companys/Notion_Symbol_1.png" },
+  { id: 4, name: "Inshot", img: "../src/assets/companys/icons8-inshot-96.png" },
   {
     id: 5,
     name: "Caesium",
