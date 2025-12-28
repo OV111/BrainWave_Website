@@ -1,3 +1,4 @@
+import laoding from "../assets/loading.png"
 const Generating = ({ className }) => {
   return (
     <div
@@ -6,7 +7,7 @@ const Generating = ({ className }) => {
       } text-base`}
     >
       AI is generating
-      <img className="w-5 h-5 ml-4" src={"src/assets/loading.png"} alt="Loading" />
+      <img className="w-5 h-5 ml-4" src={laoding} alt="Loading" />
     </div>
   );
 };

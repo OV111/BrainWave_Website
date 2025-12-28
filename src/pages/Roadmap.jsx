@@ -3,6 +3,17 @@ import { RoadmapGradient } from "../styleComponents/RoadmapGradient";
 import { RoadmapGradient2 } from "../styleComponents/RoadmapGradient";
 import Button from "../components/Button";
 import { Link } from "react-router-dom";
+import grid from "../assets/grid.png"
+import image1 from "../assets/roadmap/image-1.png"
+import image2 from "../assets/roadmap/image-2.png"
+import image3 from "../assets/roadmap/image-3.png"
+import image4 from "../assets/roadmap/image-4.png"
+
+import discord from "../assets/socials/discord.svg"
+import facebook from "../assets/socials/facebook.svg"
+import instagram from "../assets/socials/instagram.svg"
+import telegram from "../assets/socials/telegram.svg"
+import twitter from "../assets/socials/twitter.svg"
 // import { BottomLine } from "../components/BottomLine";
 const Roadmap = () => {
   return (
@@ -28,7 +39,7 @@ const Roadmap = () => {
           <div className="grid">
             <div className="relative w-155 h-180 border-[#252134] border-[0.2px] rounded-2xl mt-20 mb-0 opacity-100 z-1">
               <img
-                src="src/assets/grid.png"
+                src={grid}
                 alt="bg-grid"
                 className="absolute w-full h-full "
               />
@@ -39,7 +50,7 @@ const Roadmap = () => {
                 <p className="text-xl text-white font-mono">Done</p>
               </div>
               <img
-                src="src/assets/roadmap/image-1.png"
+                src={image1}
                 alt=""
                 className="mt-10 "
               />
@@ -56,7 +67,7 @@ const Roadmap = () => {
             </div>
             <div className="relative w-155 h-180 border-[#252134] border-[0.2px] rounded-2xl mb-15 pt-0 z-1">
               <img
-                src="src/assets/grid.png"
+                src={grid}
                 alt="bg-grid"
                 className="absolute w-full h-full opacity-80"
               />
@@ -67,7 +78,7 @@ const Roadmap = () => {
                 <p className="text-xl text-white font-mono">Done</p>
               </div>
               <img
-                src="src/assets/roadmap/image-3.png"
+                src={image3}
                 alt=""
                 className="mt-10 mb-8"
               />
@@ -87,7 +98,7 @@ const Roadmap = () => {
           <div className="grid ">
             <div className="relative w-155 h-180 border-[#252134] border-[0.2px] rounded-2xl ml-5 mt-40 pt-0 z-1 opacity-100">
               <img
-                src="src/assets/grid.png"
+                src={grid}
                 alt="bg-grid"
                 className="absolute w-full h-full"
               />
@@ -98,7 +109,7 @@ const Roadmap = () => {
                 <p className="text-white text-lg font-mono">In Progress</p>
               </div>
               <img
-                src="src/assets/roadmap/image-2.png"
+                src={image2}
                 alt=""
                 className="mt-10 mb-8 ml-4"
               />
@@ -115,7 +126,7 @@ const Roadmap = () => {
             {/*  */}
             <div className="relative w-155 h-180 border-[#252134] border-[0.2px] rounded-2xl ml-5 mt-5 pt-0 z-1">
               <img
-                src="src/assets/grid.png"
+                src={grid}
                 alt="bg-grid"
                 className="absolute w-full h-full"
               />
@@ -126,7 +137,7 @@ const Roadmap = () => {
                 <p className="text-white text-lg font-mono">In Progress</p>
               </div>
               <img
-                src="src/assets/roadmap/image-4.png"
+                src={image4}
                 alt=""
                 className="mt-10 mb-2"
               />
@@ -170,7 +181,7 @@ const Roadmap = () => {
             <li>
               <Link to="/">
                 <img
-                  src="src/assets/socials/discord.svg"
+                  src={discord}
                   alt=""
                   className="w-8 h-8"
                 />
@@ -179,7 +190,7 @@ const Roadmap = () => {
             <li>
               <Link to="/">
                 <img
-                  src="src/assets/socials/facebook.svg"
+                  src={facebook}
                   alt=""
                   className="w-8 h-8"
                 />
@@ -188,7 +199,7 @@ const Roadmap = () => {
             <li>
               <Link to="/">
                 <img
-                  src="src/assets/socials/instagram.svg"
+                  src={instagram}
                   alt=""
                   className="w-8 h-8"
                 />
@@ -197,7 +208,7 @@ const Roadmap = () => {
             <li>
               <Link to="/">
                 <img
-                  src="src/assets/socials/telegram.svg"
+                  src={telegram}
                   alt=""
                   className="w-8 h-8"
                 />
@@ -206,7 +217,7 @@ const Roadmap = () => {
             <li>
               <Link to="/">
                 <img
-                  src="src/assets/socials/twitter.svg"
+                  src={twitter}
                   alt=""
                   className="w-8 h-8"
                 />

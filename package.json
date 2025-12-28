@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "antd": "^5.28.0",
+    "firebase-tools": "^14.24.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-just-parallax": "^3.1.16",

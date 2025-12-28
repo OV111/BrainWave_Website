@@ -1,11 +1,19 @@
 import React from "react";
 import Button from "../components/Button";
-import BottomLine from "../styleComponents/BottomLine.jsx"
+import BottomLine from "../styleComponents/BottomLine.jsx";
 import { BackgroundCircles } from "../components/BackgroundCircles";
 import PlusSvg from "../styleComponents/PlusSvg.jsx";
 import Generating from "../components/Generating";
 import { companys, icons } from "../constants/data.js";
 import { Gradient } from "../styleComponents/Gradient.jsx";
+
+import robot from "../assets/hero/robot2.jpg";
+import hero from "../assets/hero/hero-background.jpg";
+import curve from "../assets/hero/curve.png";
+import image1 from "../assets/notification/image-1.png";
+import image4 from "../assets/notification/image-4.png";
+import image2 from "../assets/notification/image-2.png";
+import image3 from "../assets/notification/image-3.png";
 
 const Hero = () => {
   return (
@@ -13,7 +21,7 @@ const Hero = () => {
       <section id="/">
         <div className="relative overflow-hidden pb-10">
           <img
-            src="../src/assets/hero/hero-background.jpg"
+            src={hero}
             alt=""
             className="absolute inset-0 w-full h-full object-cover -z-10 "
           />
@@ -25,13 +33,13 @@ const Hero = () => {
           <PlusSvg className="hidden absolute left-[34.5px] z-2 pointer-events-none xl:block" />
 
           <div className="relative top-50 mx-auto text-center">
-            <div className="flex">
-              <h1 className="font-semibold text-[#FFFFFF] text-center mx-auto text-6xl w-220 max-w-[260]">
+           <div className="flex">
+              <h1 className="font-semibold text-[#FFFFFF] text-center mx-auto text-6xl w-220 max-w-260">
                 Explore the Possibilities of AI Chatting with{" "}
-                <span className="inline-block relative">
+                <span className="relative inline-block">
                   BrainWave
                   <img
-                    src="../src/assets/hero/curve.png"
+                    src={curve}
                     alt="curve of brainwave"
                     className="absolute top-full w-full xl:-mt-2"
                   />
@@ -61,7 +69,7 @@ const Hero = () => {
                 <div className="h-[470px] w-full relative mx-auto rounded-xl rounded-tr-none rounded-tl-none overflow-hidden ">
                   {/* Robot Image */}
                   <img
-                    src="../src/assets/hero/robot2.jpg"
+                    src={robot}
                     className="w-full h-full object-cover"
                     alt="robot pic"
                   />
@@ -75,14 +83,14 @@ const Hero = () => {
           <div className="absolute left-25 bottom-95 flex justify-between items-center gap-8 border-[0.2px] border-[#413f48] p-5 bg-[#25213480] backdrop-blur-sm rounded-2xl z-1">
             {icons.map((obj) => (
               <div>
-                <img src={obj.icon} alt="" />
+                <img src={obj.icon} alt="" key={obj.id} />
               </div>
             ))}
           </div>
 
           <div className="absolute right-22 bottom-140 z-1 p-2 flex border-[0.2px] border-[#413f48] rounded-2xl backdrop-blur-sm bg-[#25213480]">
             <img
-              src="src/assets/notification/image-1.png"
+              src={image1}
               alt=""
               className="rounded-xl"
               width={60}
@@ -94,21 +102,21 @@ const Hero = () => {
               </h1>
               <div className="flex items-center gap-2">
                 <img
-                  src="src/assets/notification/image-4.png"
+                  src={image4}
                   alt=""
                   width={20}
                   height={20}
                   className="rounded-full"
                 />
                 <img
-                  src="src/assets/notification/image-2.png"
+                  src={image2}
                   alt=""
                   width={20}
                   height={20}
                   className="rounded-full"
                 />
                 <img
-                  src="src/assets/notification/image-3.png"
+                  src={image3}
                   alt=""
                   width={20}
                   height={20}
@@ -120,10 +128,11 @@ const Hero = () => {
           <h3 className="text-center text-xl font-mono pb-2 text-[#ADA8C3]">
             Helping People Create Beautiful Content At
           </h3>
-          <div className="flex justify-center pt-8 items-center gap-40 ">
+          <div className="flex justify-center pt-8 pb-8 items-center gap-40 ">
             {companys.map((company) => (
               <img
                 src={company.img}
+                key={company.id}
                 width={70}
                 height={70}
                 alt="company's"
