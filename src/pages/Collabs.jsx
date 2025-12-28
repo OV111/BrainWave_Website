@@ -4,6 +4,10 @@ import Button from "../components/Button";
 import { collabsApps } from "../constants/data";
 import { LeftCurve } from "../styleComponents/Collaboration";
 import { RightCurve } from "../styleComponents/Collaboration";
+
+import brainwave from "../assets/brainwave-symbol.svg"
+import check from "../assets/check.svg"
+
 const Collabs = () => {
   return (
     <section id="collabs" className="relative">
@@ -23,7 +27,7 @@ const Collabs = () => {
             <ul>
               <li className="pb-4">
                 <div className="flex justify-start items-center gap-5 pb-2">
-                  <img src="../src/assets/check.svg" alt="" />
+                  <img src={check} alt="" />
                   <h3 className="text-xl font-semibold text-white">
                     Seamless Integration
                   </h3>
@@ -34,13 +38,13 @@ const Collabs = () => {
                 </p>
               </li>
               <li className="flex justify-start items-center gap-5 pb-4">
-                <img src="../src/assets/check.svg" alt="" />
+                <img src={check} alt="" />
                 <h3 className="text-xl font-semibold text-white">
                   Smart Automation
                 </h3>
               </li>
               <li className="flex justify-start items-center gap-5">
-                <img src="../src/assets/check.svg" alt="" />
+                <img src={check} alt="" />
                 <h3 className="text-xl font-semibold  text-white">
                   Top-notch Security
                 </h3>
@@ -66,7 +70,7 @@ const Collabs = () => {
               <div className="w-[6rem] aspect-square m-auto p-[0.2rem] bg-[#090321] rounded-full">
                 <div className="flex items-center justify-center w-full h-full border-[#252134] border-3 border-purple-600 rounded-full">
                   <img
-                    src="src/assets/brainwave-symbol.svg"
+                    src={brainwave}
                     width={48}
                     height={48}
                     alt="brainwave"

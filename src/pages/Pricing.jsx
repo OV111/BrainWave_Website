@@ -2,7 +2,9 @@ import React from "react";
 import PlusSvg from "../styleComponents/PlusSvg";
 import Button from "../components/Button";
 import { pricing } from "../constants/data";
-
+import  pricing4  from "../assets/pricing/4-small.png"
+import check from "../assets/check.svg"
+import stars from "../assets/pricing/stars.svg"
 const Pricing = () => {
   return (
     <section id="pricing">
@@ -13,14 +15,14 @@ const Pricing = () => {
         <PlusSvg className="absolute right-[34.5px] z-1"></PlusSvg>
 
         <img
-          src="src/assets/pricing/4-small.png"
+          src={pricing4}
           alt=""
           width={250}
           height={250}
           className="absolute mx-147 top-30 z-1"
         />
         <img
-          src="src/assets/pricing/stars.svg"
+          src={stars}
           alt=""
           className="relative mx-auto "
         />
@@ -63,7 +65,7 @@ const Pricing = () => {
                     className="flex items-center mx-auto w-80 max-w-90 h-30 max-h-20"
                   >
                     <li className="flex justify-center items-center  gap-5 border-t-[0.1px] border-[#ADA8C3] pt-2 mb-10">
-                      <img src="src/assets/check.svg" alt="" />
+                      <img src={check} alt="" />
                       <p className="text-[#ADA8C3]"> {desc.text}</p>
                     </li>
                   </ul>
@@ -72,14 +74,7 @@ const Pricing = () => {
             </div>
           ))}
         </div>
-        {/* <div className="text-center mb-0">
-          <Link
-            to="#"
-            className="text-white underline text-xl font-semibold"
-          >
-            See The Full Details
-          </Link>
-        </div> */}
+        
       </div>
     </section>
   );

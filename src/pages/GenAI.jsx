@@ -4,6 +4,15 @@ import { VideoBar, VideoChatMessage } from "../styleComponents/VideoStyle";
 import { Gradient } from "../styleComponents/Gradient";
 import { VideoChatMsg } from "../components/VideoChatMsg";
 
+import service1 from "../assets/services/service-1.png"
+import service2 from "../assets/services/service-2.png"
+import check from "../assets/check.svg"
+import chromeCast from "../assets/genAiIcons/chrome-cast.svg"
+import recording3 from "../assets/genAiIcons/recording-03.svg"
+import disc2 from "../assets/genAiIcons/disc02.svg"
+import recording1 from "../assets/genAiIcons/recording-01.svg"
+import sliders4 from "../assets/genAiIcons/sliders-04.svg"
+import service3 from "../assets/services/service-3.png"
 const GenAI = () => {
   return (
     <section id="how-to-use">
@@ -20,7 +29,7 @@ const GenAI = () => {
         <div className="flex border-[0.2px] rounded-2xl mx-15 border-[#252134]">
           <Gradient />
           <img
-            src="src/assets/services/service-1.png"
+            src={service1}
             width={800}
             alt="robot-1"
             className="z-30"
@@ -33,15 +42,15 @@ const GenAI = () => {
             </p>
             <ul className="pt-8">
               <li className="flex gap-5 border-t-[0.7px] border-[#252134] py-4">
-                <img src="../src/assets/check.svg" alt="checkimg" />
+                <img src={check} alt="checkimg" />
                 <p className="text-xl text-white">Photo generating</p>
               </li>
               <li className="flex gap-5 border-t-[0.7px] border-[#252134] py-4">
-                <img src="../src/assets/check.svg" alt="checkimg" />
+                <img src={check} alt="checkimg" />
                 <p className="text-xl text-white">Photo enhance</p>
               </li>
               <li className="flex gap-5 border-t-[0.7px] border-[#252134] py-4">
-                <img src="../src/assets/check.svg" alt="checkimg" />
+                <img src={check} alt="checkimg" />
                 <p className="text-xl text-white">Seamless Integration</p>
               </li>
             </ul>
@@ -55,7 +64,7 @@ const GenAI = () => {
           <div className="relative ml-15 border-[0.2px] border-[#252134] rounded-2xl">
             <div className="">
               <img
-                src="src/assets/services/service-2.png"
+                src={service2}
                 alt="robot-2"
                 width={700}
                 className="rounded-2xl "
@@ -87,7 +96,7 @@ const GenAI = () => {
               <ul className="flex mt-10 pb-1 justify-between items-center mx-auto max-w-140 ">
                 <li className="p-3 bg-[#474060] rounded-2xl">
                   <img
-                    src="src/assets/genAiIcons/chrome-cast.svg"
+                    src={chromeCast}
                     alt=""
                     width={35}
                     height={35}
@@ -95,7 +104,7 @@ const GenAI = () => {
                 </li>
                 <li className="p-3 bg-[#474060] rounded-2xl">
                   <img
-                    src="src/assets/genAiIcons/recording-03.svg"
+                    src={recording3}
                     alt=""
                     width={35}
                     height={35}
@@ -103,7 +112,7 @@ const GenAI = () => {
                 </li>
                 <li className="p-3 bg-[#474060] rounded-2xl">
                   <img
-                    src="src/assets/genAiIcons/disc02.svg"
+                    src={disc2}
                     alt=""
                     width={35}
                     height={35}
@@ -111,7 +120,7 @@ const GenAI = () => {
                 </li>
                 <li className="p-3 bg-[#474060] rounded-2xl">
                   <img
-                    src="src/assets/genAiIcons/recording-01.svg"
+                    src={recording1}
                     alt=""
                     width={35}
                     height={35}
@@ -119,7 +128,7 @@ const GenAI = () => {
                 </li>
                 <li className="p-3 bg-[#474060] rounded-2xl">
                   <img
-                    src="src/assets/genAiIcons/sliders-04.svg"
+                    src={sliders4}
                     alt=""
                     width={35}
                     height={35}
@@ -130,7 +139,7 @@ const GenAI = () => {
 
             <div className="relative rounded-2xl mx-4 border-none h-100 bg-[#3F3A52]">
               <img
-                src="src/assets/services/service-3.png"
+                src={service3}
                 className="w-full h-full object-cover ml-4"
                 // width={520}
                 // height={200}

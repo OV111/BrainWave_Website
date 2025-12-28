@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "../index.css";
 import Button from "./Button";
-
+import brainwave from '../assets/brainwave.svg'
 const Navbar = () => {
   const location = useLocation();
 
@@ -25,7 +25,7 @@ const Navbar = () => {
       <div className="flex justify-between items-center fixed z-50 w-full pl-10 bg-[#0E0C15]/50 backdrop-blur-lg text-2xl p-6">
         <div className="">
           <Link to="">
-            <img src="src/assets/brainwave.svg" alt="" className="" />
+            <img src={brainwave} alt="" className="" />
           </Link>
         </div>
         <div className="flex justify-between items-center text-[#CAC6DD] text-sm gap-20 font-mono transition-colors duration-500">
