@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "motion/react";
 import Button from "../components/Button";
 import BottomLine from "../styleComponents/BottomLine.jsx";
 import { BackgroundCircles } from "../components/BackgroundCircles";
@@ -18,7 +19,7 @@ import image3 from "../assets/notification/image-3.png";
 const Hero = () => {
   return (
     <React.Fragment>
-      <section id="/">
+      <section id="hero">
         <div className="relative overflow-hidden pb-10">
           <img
             src={hero}
@@ -80,15 +81,23 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div className="absolute left-25 bottom-95 flex justify-between items-center gap-8 border-[0.2px] border-[#413f48] p-5 bg-[#25213480] backdrop-blur-sm rounded-2xl z-1">
+          <motion.div
+            className="absolute left-25 bottom-95 flex justify-between items-center gap-8 border-[0.2px] border-[#413f48] p-5 bg-[#25213480] backdrop-blur-sm rounded-2xl z-1"
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+          >
             {icons.map((obj) => (
-              <div>
-                <img src={obj.icon} alt="" key={obj.id} />
+              <div key={obj.id}>
+                <img src={obj.icon} alt="" />
               </div>
             ))}
-          </div>
+          </motion.div>
 
-          <div className="absolute right-22 bottom-140 z-1 p-2 flex border-[0.2px] border-[#413f48] rounded-2xl backdrop-blur-sm bg-[#25213480]">
+          <motion.div
+            className="absolute right-22 bottom-140 z-1 p-2 flex border-[0.2px] border-[#413f48] rounded-2xl backdrop-blur-sm bg-[#25213480]"
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+          >
             <img
               src={image1}
               alt=""
@@ -124,7 +133,7 @@ const Hero = () => {
                 />
               </div>
             </div>
-          </div>
+          </motion.div>
           <h3 className="text-center text-xl font-mono pb-2 text-[#ADA8C3]">
             Helping People Create Beautiful Content At
           </h3>

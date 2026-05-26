@@ -7,7 +7,7 @@ const Navbar = () => {
   const location = useLocation();
 
   const pathToId = {
-    "/": "navbar",
+    "/": "hero",
     "/features": "features",
     "/pricing": "pricing",
     "/how-to-use": "how-to-use",
@@ -16,7 +16,8 @@ const Navbar = () => {
   useEffect(() => {
     const sectionId = pathToId[location.pathname];
     if (sectionId) {
-      document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
+      const el = document.getElementById(sectionId);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
     }
   }, [location.pathname]);
 

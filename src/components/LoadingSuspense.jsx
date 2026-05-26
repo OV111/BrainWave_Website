@@ -1,8 +1,10 @@
 import { Spin } from "antd";
 const LoadingSuspense = () => {
   return (
-    <div className="flex justify-center items-center ">
-      <Spin size="large" tip="Loading data..." />
+    <div className="flex justify-center items-center">
+      <Spin size="large">
+        <span className="text-[#ADA8C3] text-sm font-mono">Loading...</span>
+      </Spin>
     </div>
   );
 };
