@@ -1,16 +1,72 @@
-# React + Vite
+# BrainWave
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern AI chat application landing page built with React and Vite, showcasing generative AI features for creators and teams.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+BrainWave is a polished marketing site for an AI-powered chatbot platform. It highlights capabilities like photo generation, photo editing, video generation, voice recognition, and seamless team collaboration — all wrapped in a sleek dark-themed UI with smooth animations and parallax effects.
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Hero Section** — Animated robot showcase with parallax background circles and floating collaboration badges
+- **Features Grid** — 6 feature cards: Ask Anything, Improve Everyday, Connect Everywhere, Smart Suggestions, Seamless Integration, Instant Insights
+- **Collaborations** — Central logo surrounded by rotating integration icons (Slack, Figma, Notion, Discord, Photoshop, and more)
+- **Generative AI Showcase** — Photo editing, photo enhancement, and video generation demos
+- **Pricing** — 3-tier plans: Basic (free), Premium ($9.99), Enterprise (custom)
+- **Roadmap** — Timeline of upcoming features with status indicators (Done / In Progress)
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Tool | Purpose |
+|------|---------|
+| React 19 + Vite 7 | UI framework & build tool |
+| React Router v7 | Client-side routing (HashRouter) |
+| Tailwind CSS 4 | Styling |
+| Motion | Animations |
+| react-just-parallax | Parallax scroll effects |
+| Ant Design | Loading spinner component |
+
+## Project Structure
+
+```
+src/
+├── components/        # Reusable UI (Navbar, Button, Hero, Footer, etc.)
+├── pages/             # Lazy-loaded page sections (Hero, Features, Collabs, GenAI, Pricing, Roadmap)
+├── styleComponents/   # Decorative SVG/gradient elements
+├── constants/
+│   └── data.js        # All static data (features, pricing, icons, collab apps)
+├── assets/            # Images and SVGs organized by section
+├── App.jsx            # Root component with routing
+└── HomePage.jsx       # Composes all sections with React.lazy + Suspense
+```
+
+## Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+## Deployment
+
+The project includes config for both **Netlify** (`netlify.toml`) and **Firebase** (`firebase-tools`).
+
+**Netlify (recommended):**
+Push to your connected repo — Netlify auto-deploys on every commit.
+
+**Firebase Hosting:**
+```bash
+npm install -g firebase-tools
+firebase login
+firebase init hosting
+firebase deploy
+```
